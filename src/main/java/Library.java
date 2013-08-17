@@ -6,7 +6,7 @@
  */
 public class Library {
     public static void main(String[] args) {
-        System.out.println("Gradle아 안녕?");
+        System.out.println(args[0] + "아 안녕?");
     }
 
     public boolean someLibraryMethod() {

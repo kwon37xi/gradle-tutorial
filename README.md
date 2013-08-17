@@ -28,3 +28,11 @@ gradle setupBuild --type java-library
 ```
 java -cp build/classes/main/ Library
 ```
+
+## Java 클래스를 Gradle로 실행해 보며 Task 추가해보기
+
+```
+./gradlew build
+./gradlew tasks
+./gradlew runLibrary
+```
