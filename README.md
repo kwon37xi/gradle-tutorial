@@ -70,12 +70,12 @@ targetCompatibility = javaVersion
 ```
 
 * 프로젝트 기본 레이아웃
-** src/main/java : 실행 자바 소스
-** src/main/resources : 실행 리소스
-** src/test/java : 테스트 자바 소스
-** src/test/resources : 테스트 리소스
-** src/소스셋/java : 특정 소스 셋의 Java 소스
-** src/소스셋/resources : '특정 소스 셋의 리소스
+  * src/main/java : 실행 자바 소스
+  * src/main/resources : 실행 리소스
+  * src/test/java : 테스트 자바 소스
+  * src/test/resources : 테스트 리소스
+  * src/소스셋/java : 특정 소스 셋의 Java 소스
+  * src/소스셋/resources : '특정 소스 셋의 리소스
 
 ## Eclipse 설정 파일 생성하기
 
