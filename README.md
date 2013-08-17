@@ -21,3 +21,10 @@ mkdir gradle-tutorial
 cd gradle-tutorial
 gradle setupBuild --type java-library
 ```
+
+## Java 클래스를 작성하고 컴파일 해 보기
+
+* Java 기본 소스 디렉토리 구조를 사용한다.
+```
+java -cp build/classes/main/ Library
+```
