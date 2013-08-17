@@ -77,3 +77,8 @@ targetCompatibility = javaVersion
 ** src/소스셋/java : 특정 소스 셋의 Java 소스
 ** src/소스셋/resources : '특정 소스 셋의 리소스
 
+## Eclipse 설정 파일 생성하기
+
+* eclipse 플러그인을 지정하고,
+* Eclipse에서 프로젝트를 열어 본다.
+* External Tools를 통해 gradlew eclipse를 실행할 수 있도록 한다.

@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
 
 repositories {
     mavenCentral()
@@ -27,4 +28,13 @@ task runLibrary(type: JavaExec) {
     classpath += sourceSets.main.runtimeClasspath
 
     args "Gradle"
+}
+
+tasks.eclipse.dependsOn cleanEclipse
+
+eclipse {
+    classpath {
+        downloadSources = true
+        defaultOutputDir = file("${buildDir}/classes/main")
+    }
 }
