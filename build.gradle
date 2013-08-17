@@ -4,6 +4,16 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    javaVersion = '1.7'
+}
+
+buildDir = 'build'
+
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.5'
 

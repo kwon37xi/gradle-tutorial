@@ -53,3 +53,27 @@ java -cp build/classes/main/ Library
 ./gradlew -Dtest.single=LibraryTest test
 ```
 
+## Java 설정 튜닝
+
+* build.gradle 파일에서 Java 관련 설정을 해본다.
+
+```groovy
+ext {
+  javaVersion='1.7'
+}
+
+buildDir = 'build' // 원래 기본값
+
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+```
+
+* 프로젝트 기본 레이아웃
+** src/main/java : 실행 자바 소스
+** src/main/resources : 실행 리소스
+** src/test/java : 테스트 자바 소스
+** src/test/resources : 테스트 리소스
+** src/소스셋/java : 특정 소스 셋의 Java 소스
+** src/소스셋/resources : '특정 소스 셋의 리소스
+
