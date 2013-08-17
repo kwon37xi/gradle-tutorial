@@ -36,3 +36,20 @@ java -cp build/classes/main/ Library
 ./gradlew tasks
 ./gradlew runLibrary
 ```
+
+## Java 클래스의 테스트를 만들고 실행해보기
+
+* Library.java에 add 메소드를 추가한다.
+* 먼저 일부러 Library.java에서 틀린 메소드로 만들어 본다.
+
+```
+./gradlew test
+```
+
+* 다시 잘 작동하는 테스트로 고치고 실행해본다.
+* 단일 테스트 클래스 실행
+
+```
+./gradlew -Dtest.single=LibraryTest test
+```
+
