@@ -1,0 +1,34 @@
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse-wtp'
+
+	repositories {
+	    mavenCentral()
+	}
+
+	ext {
+    	javaVersion = '1.7'
+	}
+
+	buildDir = 'build'
+
+	sourceCompatibility = javaVersion
+	targetCompatibility = javaVersion
+	[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+	dependencies {
+	    compile 'org.slf4j:slf4j-api:1.7.5'
+
+	    testCompile "junit:junit:4.11"
+	}
+
+	tasks.eclipse.dependsOn cleanEclipse
+
+	eclipse {
+	    classpath {
+	        downloadSources = true
+	        defaultOutputDir = file("${buildDir}/classes/main")
+	    }
+	}
+}

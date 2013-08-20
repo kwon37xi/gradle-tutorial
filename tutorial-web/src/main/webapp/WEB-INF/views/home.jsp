@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Hello, Gradle!</title>
+<title>Hello, ${to}</title>
 </head>
 <body>
-<h1>Hello, Gradle!</h1>
+<h1>Hello, ${to}</h1>
 <p>
 gradle tutorial.
 </p>

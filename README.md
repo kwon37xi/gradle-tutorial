@@ -125,3 +125,19 @@ gradlew eclipse
   * gradletutorial.servlet.HomeServlet
   * /WEB-INF/views/home.jsp
 * Run on server, http://localhost:8080/home 호출하여 실행한다.
+
+## build.gradle 정리 및 프로젝트 의존성 지정
+
+* 양쪽 프로젝트에 존재하는 build.gradle 중복을 정리하자.
+
+```
+subprojects {
+...
+}
+````
+
+* tutorial-web이 tutorial에 의존하고, tutorial에 있는 클래스의 특정 값을 웹 페이지로 출력하자(이를 하기전에 먼저 Eclipse에서 tutorial-web의 의존성에 tutorial 프로젝트가 없음을 확인한다).
+
+```
+compile project(':tutorial')
+```
