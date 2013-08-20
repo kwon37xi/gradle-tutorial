@@ -165,3 +165,9 @@ gradlew :tutorial:dependencies
 ** -q : 조용히 실행.
 ** -i, -d : info 레벨, debug 레벨 실행
 ** -recompile-scripts : build.gradle 재컴파일
+
+## 참고자료
+
+* http://wiki.kwonnam.pe.kr/gradle
+* http://www.gradle.org/
+* https://github.com/SpringSource/gradle-plugins/tree/master/propdeps-plugin : providec, optional 지원
