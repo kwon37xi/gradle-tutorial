@@ -82,3 +82,46 @@ targetCompatibility = javaVersion
 * eclipse 플러그인을 지정하고,
 * Eclipse에서 프로젝트를 열어 본다.
 * External Tools를 통해 gradlew eclipse를 실행할 수 있도록 한다.
+
+## 멀티 프로젝트 전환하고 웹 프로젝트를 구성해본다
+
+* Java Library와 Web으로 구성된 멀티 프로젝트로 전환한다.
+
+```
+mkdir tutorial
+cd tutorial
+# 필요한 파일들을 이동한다.
+git mv build.gradle src tutorial/
+
+mkdir tutorial-web
+cd tutorial-web
+gradle setupBuild --type java-library
+rm settings.gradle
+rm gradlew*
+rm -rf gradle
+mkdir -p src/main/webapp/WEB-INF # webapp 기본디렉토리
+
+# tutorial-web/build.gradlejc war 플러그인 추가
+apply plugin: 'war'
+
+# providedCompile로 서블릿 라이브러리를 추가해본다.
+providedCompile "javax.servlet:javax.servlet-api:3.0.1"
+
+# settings.gradle에 tutorial, tutorial-web 추가한다.
+
+# 모든 build.gradle에 apply plugin: 'eclipse-wtp' 적용
+- 일종의 gradle 버그?
+
+# tutorial-web/build.gradle 에 wtp 설정 넣기
+
+# Eclipse에서 프로젝트를 삭제하고, .classpath, .project, .settings도 삭제하고 general 프로젝트로 다시 import.
+
+gradlew eclipse
+```
+
+* Search for nested project로 tutorial과 tutorial-web 프로젝트 import
+
+* 서블릿을 생성해본다.
+  * gradletutorial.servlet.HomeServlet
+  * /WEB-INF/views/home.jsp
+* Run on server, http://localhost:8080/home 호출하여 실행한다.

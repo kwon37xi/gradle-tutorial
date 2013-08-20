@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    javaVersion = '1.7'
+}
+
+buildDir = 'build'
+
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.5'
+
+    testCompile "junit:junit:4.11"
+}
+
+// JavaExec라는 Task 클래스를 상속하여 태스크 생성
+// http://www.gradle.org/docs/current/dsl/org.gradle.api.tasks.JavaExec.html
+task runLibrary(type: JavaExec) {
+    main = "Library"
+    classpath += sourceSets.main.runtimeClasspath
+
+    args "Gradle"
+}
+
+tasks.eclipse.dependsOn cleanEclipse
+
+eclipse {
+    classpath {
+        downloadSources = true
+        defaultOutputDir = file("${buildDir}/classes/main")
+    }
+}
