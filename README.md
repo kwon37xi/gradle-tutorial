@@ -162,9 +162,9 @@ gradlew :tutorial:dependencies
 ```
 
 * 명령행 몇가지
-** -q : 조용히 실행.
-** -i, -d : info 레벨, debug 레벨 실행
-** -recompile-scripts : build.gradle 재컴파일
+  * -q : 조용히 실행.
+  * -i, -d : info 레벨, debug 레벨 실행
+  * -recompile-scripts : build.gradle 재컴파일
 
 ## 참고자료
 
