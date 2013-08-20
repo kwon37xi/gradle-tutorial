@@ -1,3 +1,22 @@
+
+ext {
+	slf4jVersion = '1.7.5'
+	logbackVersion = '1.0.13'
+}
+
+List loggers = [
+    "org.slf4j:slf4j-api:${slf4jVersion}",
+    "org.slf4j:jcl-over-slf4j:${slf4jVersion}",
+    "org.slf4j:log4j-over-slf4j:${slf4jVersion}",
+    "org.slf4j:jul-to-slf4j:${slf4jVersion}",
+    "ch.qos.logback:logback-core:${logbackVersion}",
+    "ch.qos.logback:logback-classic:${logbackVersion}"
+]
+
+dependencies {
+	compile loggers
+}
+
 // JavaExec라는 Task 클래스를 상속하여 태스크 생성
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.tasks.JavaExec.html
 task runLibrary(type: JavaExec) {

@@ -141,3 +141,10 @@ subprojects {
 ```
 compile project(':tutorial')
 ```
+
+## Logback을 설정해보자
+
+* List로 의존성 묶음 지정
+* 전역 depenency exclude.
+  * 전역 exclude는 subprojects {} 에 지정해야만 모든 프로젝트에서 exclude가 된다.
+* 
