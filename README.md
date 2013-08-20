@@ -1,5 +1,13 @@
 # Gradle Tutorial
 
+## Tutorial 따라하기
+
+```
+git clone https://github.com/kwon37xi/gradle-tutorial.git
+git checkout step_01
+# 이후 git checkout step_xx 숫자를 높여가며 실행해 본다.
+````
+
 ## 시작하기
 
 * http://www.gradle.org/
