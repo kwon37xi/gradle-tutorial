@@ -178,4 +178,4 @@ gradlew :tutorial:dependencies
 
 * http://wiki.kwonnam.pe.kr/gradle
 * http://www.gradle.org/
-* https://github.com/SpringSource/gradle-plugins/tree/master/propdeps-plugin : providec, optional 지원
+* https://github.com/SpringSource/gradle-plugins/tree/master/propdeps-plugin : provided, optional 지원
