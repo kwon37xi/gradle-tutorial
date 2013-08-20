@@ -147,4 +147,21 @@ compile project(':tutorial')
 * List로 의존성 묶음 지정
 * 전역 depenency exclude.
   * 전역 exclude는 subprojects {} 에 지정해야만 모든 프로젝트에서 exclude가 된다.
-* 
+
+## Gradle Wrapper 설정과 명령행 실행
+
+* Gradle Wrapper를 사용하여 모든 프로그래머들에게 동일한 Gradle 버전을 설치과정 없이 공급할 수 있다.
+* gradlew, gradlew.bat 스크립트를 편집하여 동일한 설정을 적용할 수 있다.
+
+* 기본적으로 태스크는 현재 디렉토리가 속한 프로젝트를 기준으로 실행한다.
+* 최상위 프로젝트에서 실행시 특정 태스크를 실행하면 하위 프로젝트에 대해서도 해당 태스크가 존재하면 실행한다.
+* 특정 프로젝트 지정하여 태스크를 실행하려면 :project-name:taskname 으로 실행한다.
+
+```
+gradlew :tutorial:dependencies
+```
+
+* 명령행 몇가지
+** -q : 조용히 실행.
+** -i, -d : info 레벨, debug 레벨 실행
+** -recompile-scripts : build.gradle 재컴파일
