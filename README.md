@@ -1,5 +1,7 @@
 # Gradle Tutorial
 
+* 이 문서를 좀 더 발전시킨 [Rocking the gradle](https://github.com/ihoneymon/rocking-the-gradle) 참조.
+
 ## Tutorial 따라하기
 
 ```
