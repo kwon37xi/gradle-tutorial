@@ -6,8 +6,9 @@
 
 ```
 git clone https://github.com/kwon37xi/gradle-tutorial.git
-git checkout step_01
-# 이후 git checkout step_xx 숫자를 높여가며 실행해 본다.
+git reset --hard step_01
+# 이후 git reset --hard step_xx 숫자를 높여가며 실행해 본다.
+# 최종으로 복귀하려면 git reset --hard origin/master 수행
 ````
 
 ## 시작하기
